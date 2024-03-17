@@ -4,18 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Navbar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Manga Effectli Button</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 20px;
+            color: white;
+            background-color: #ff4500;
+            border: 2px solid #ff4500;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(255, 69, 0, 0.5);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s;
+        }
+
+        .button:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    </style>
 </head>
 
 <body>
-    <div class="navbar">
-        <a href="#">Ana Sayfa</a>
-        <a href="#">Trendler</a>
-        <a href="#">Abonelikler</a>
-        <input type="text" placeholder="Ara...">
-        <button>Ara</button>
-    </div>
+    <a href="#" class="button">Manga Effectli Button</a>
 </body>
 
 </html>
